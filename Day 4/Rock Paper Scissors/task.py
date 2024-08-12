@@ -40,7 +40,7 @@ print(game_images[computer_choice])
 if user_choice >= 3 or user_choice < 0:
     print("Invalid number - you lose!")
 elif user_choice == 0 and computer_choice == 2:
-    print("You win!")
+    print("You WIN!")
 elif computer_choice > user_choice:
     print("You LOSER!")
 
