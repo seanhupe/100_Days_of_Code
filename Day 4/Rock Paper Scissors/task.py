@@ -51,7 +51,7 @@ elif computer_choice == user_choice:
     print("It is a Draw - Play again!")
 
 elif computer_choice == 0 and user_choice == 2:
-    print("LOSER")
+    print("LOSER!")
 
 
 
