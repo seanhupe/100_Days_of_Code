@@ -1,6 +1,6 @@
 def my_function():
     print("Helloasfd")
-    print("Byeasfdd")
+    print("Bye")
 
 
 my_function()
