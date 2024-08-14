@@ -1,5 +1,5 @@
 def my_function():
-    print("Helloasfd")
+    print("He")
     print("Bye")
 
 
