@@ -4,7 +4,7 @@ from art import logo, vs
 from game_data import data
 import random
 
-print(logo)
+
 
 def format_data(account):
     """Format account data to be printable: Display name, description, country"""
@@ -22,6 +22,8 @@ def check_answer(user_guess, a_followers, b_followers):
         return guess == "b"         # if user guess b, then return True
 
 
+print(logo)
+score = 0
 
 # Generate a random account from the game data file
 account_a = random.choice(data)
@@ -46,19 +48,21 @@ is_correct = check_answer(guess, a_follower_count, b_follower_count)
 ## Use if statement to check if user is correct
 
 # Give user feedback on their guess
-if is_correct:
-    print("You're right!")
-else:
-    print("Sorry, that is wrong.")
-
 # Score Keeping
+if is_correct:
+    score += 1
+    print(f"You're right! Current score {score}")
+else:
+    print(f"Sorry, that is wrong. Final Score {score}")
+
+
 
 # Make game repeatable
 
 # Make account at position B become the next account at position A
 
 
-import random
+
 
 
 
