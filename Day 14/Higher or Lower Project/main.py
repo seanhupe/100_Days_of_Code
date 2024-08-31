@@ -28,6 +28,7 @@ game_should_continue = True
 account_b = random.choice(data)
 
 
+# Make game repeatable using a While loop
 while game_should_continue:
     # Generate a random account from the game data file
 
@@ -44,6 +45,10 @@ while game_should_continue:
 
     # Ask user for a guess
     guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+
+    # Clear the screen
+    print("\n" * 20)
+    print(logo)
 
     # Check if user is correct
     ## Get follower count of each account
@@ -62,16 +67,6 @@ while game_should_continue:
     else:
         print(f"Sorry, that is wrong. Final Score {score}")
         game_should_continue = False
-
-
-
-# Make game repeatable
-
-
-
-
-
-
 
 
 
