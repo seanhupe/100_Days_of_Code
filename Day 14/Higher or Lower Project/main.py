@@ -25,12 +25,16 @@ def check_answer(user_guess, a_followers, b_followers):
 print(logo)
 score = 0
 game_should_continue = True
+account_b = random.choice(data)
 
 
 while game_should_continue:
     # Generate a random account from the game data file
-    account_a = random.choice(data)
+
+    # Make account at position B become the next account at position A
+    account_a = account_b
     account_b = random.choice(data)
+
     if account_a == account_b:                      # in case they are the same
         account_b = random.choice(data)
 
@@ -63,7 +67,7 @@ while game_should_continue:
 
 # Make game repeatable
 
-# Make account at position B become the next account at position A
+
 
 
 
