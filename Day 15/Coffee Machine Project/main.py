@@ -30,3 +30,5 @@ resources = {
     "coffee": 100,
 }
 
+# TODO: 1. Print report of all coffee machine resources
+
