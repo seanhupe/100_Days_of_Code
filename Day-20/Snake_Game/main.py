@@ -5,16 +5,27 @@ screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("The Snake Game!")
 
-segment_1 = Turtle(shape="square")
-segment_1.color("white")
+starting_positions = [(0, 0), (-20, 0), (-40, 0)]
 
-segment_2 = Turtle(shape="square")
-segment_2.color("white")
-segment_2.goto(x=-20, y=0)
+for position in starting_positions:
+    new_segment = Turtle("square")
+    new_segment.color("white")
+    new_segment.goto(position)
 
-segment_3 = Turtle(shape="square")
-segment_3.color("white")
-segment_3.goto(x=-40, y=0)
+
+
+
+# Longer way to create the turtles and starting position
+# segment_1 = Turtle(shape="square")
+# segment_1.color("white")
+#
+# segment_2 = Turtle(shape="square")
+# segment_2.color("white")
+# segment_2.goto(x=-20, y=0)
+#
+# segment_3 = Turtle(shape="square")
+# segment_3.color("white")
+# segment_3.goto(x=-40, y=0)
 
 
 
