@@ -15,6 +15,8 @@ for turtle_index in range(0, 6):
     tim.penup()
     tim.goto(x=-230, y=y_positions[turtle_index])
 
+while
+
 
 
 #
