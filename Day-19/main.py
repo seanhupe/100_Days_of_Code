@@ -1,3 +1,4 @@
+from tarfile import TruncatedHeaderError
 from turtle import Turtle, Screen
 import random
 
@@ -17,7 +18,11 @@ for turtle_index in range(0, 6):
     tim.penup()
     tim.goto(x=-230, y=y_positions[turtle_index])
 
-while
+if user_bet:
+    is_race_on = True
+
+while is_race_on:
+    random.randint(0, 10)
 
 
 
