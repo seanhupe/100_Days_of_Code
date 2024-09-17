@@ -1,5 +1,4 @@
 import turtle
-from tarfile import TruncatedHeaderError
 from turtle import Turtle, Screen
 import random
 
@@ -26,30 +25,9 @@ if user_bet:
     is_race_on = True
 
 while is_race_on:
-    random_distance = random.randint(0, 10)
-    turtle.forward((random_distance))
 
-
-
-#
-# tim2 = Turtle(shape="turtle")
-# tim2.penup()
-# tim2.goto(x=-230, y=100)
-#
-# tim3 = Turtle(shape="turtle")
-# tim3.penup()
-# tim3.goto(x=-230, y=-50)
-#
-# tim4 = Turtle(shape="turtle")
-# tim4.penup()
-# tim4.goto(x=-230, y=50)
-#
-# tim5 = Turtle(shape="turtle")
-# tim5.penup()
-# tim5.goto(x=-230, y=-12)
-#
-# tim6 = Turtle(shape="turtle")
-# tim6.penup()
-# tim6.goto(x=-230, y=12)
+    for turtle in all_turtles:
+        random_distance = random.randint(0, 10)
+        turtle.forward(random_distance)
 
 screen.exitonclick()
