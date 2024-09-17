@@ -35,5 +35,6 @@ screen.onkey(turn_left, "a")
 screen.onkey(turn_right, "d")
 screen.onkey(clear, "c")
 
+
 screen.exitonclick()
 
