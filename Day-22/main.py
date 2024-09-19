@@ -1,4 +1,3 @@
-from tarfile import TruncatedHeaderError
 from turtle import Screen, Turtle
 import time
 
