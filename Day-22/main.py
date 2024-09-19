@@ -1,3 +1,4 @@
+from tarfile import TruncatedHeaderError
 from turtle import Screen, Turtle
 import time
 
@@ -5,6 +6,7 @@ screen = Screen()
 screen.setup(width=800, height=600)
 screen.bgcolor("black")
 screen.title("The Pong Game ASSHOLE!!")
+screen.tracer(0)
 
 paddle = Turtle()
 paddle.shape("square")
@@ -27,5 +29,8 @@ screen.listen()
 screen.onkey(go_up, "Up")
 screen.onkey(go_down, "Down")
 
+game_is_on = True
+while game_is_on:
+    screen.update()
 
 screen.exitonclick()
