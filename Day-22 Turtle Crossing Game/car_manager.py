@@ -30,3 +30,4 @@ class CarManager:
 
     def level_up(self):
         self.car_speed += 5
+
