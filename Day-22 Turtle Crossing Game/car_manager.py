@@ -1,6 +1,5 @@
 from turtle import Turtle
 import random
-
 from player import STARTING_POSITION
 
 COLORS = ["red", "orange", "gray", "green", "blue", "purple"]
