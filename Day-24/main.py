@@ -4,5 +4,5 @@
 #     print(contents)
 
 with open("new_file.txt", mode="w") as file:
-    file.write("New Text.")
+    file.write("New Text.")588865
 
