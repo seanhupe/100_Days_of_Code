@@ -12,7 +12,7 @@
 # #             temperatures.append(int(row[1]))
 # #     print(temperatures)
 #
-import pandas
+#import pandas
 #
 # data = pandas.read_csv("weather_data.csv")
 # # print(type(data["temp"]))
@@ -61,3 +61,5 @@ import pandas
 # dataframe_from_scratch = pandas.DataFrame(data_dict)
 # print(dataframe_from_scratch)
 # dataframe_from_scratch.to_csv("new_data.csv")
+
+import pandas
