@@ -81,7 +81,6 @@ data_dict = {
     "Count": [gray_squirrels_count, red_squirrels_count, black_squirrels_count]
 }
 print(data_dict)
-
 ## 2nd step is turn the dictionary in to a Data Frame
 df = pandas.DataFrame(data_dict)
 ## Save the Data Frame into a new CSV file
