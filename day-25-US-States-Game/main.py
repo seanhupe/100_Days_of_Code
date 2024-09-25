@@ -17,10 +17,12 @@ while len(guessed_states) < 50:
     # Allow user a way to quit game
     if answer_state == "Exit":
         # Create a new list of missing states to by comparing guessed_states and comparing to all_states
-        missing_states = []
-        for state in all_states:
-            if state not in guessed_states:
-                missing_states.append(state)
+        # Using Conditional List Comprehension here to replace the 4 below it
+        missing_states = [state for state in all_states if state not in guessed_states]
+        # missing_states = []
+        # for state in all_states:
+        #     if state not in guessed_states:
+        #         missing_states.append(state)
         new_data = pandas.DataFrame(missing_states)
         new_data.to_csv("states_to_learn.csv")
         break
