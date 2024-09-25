@@ -30,7 +30,7 @@
 #     # Or...using Pandas
 # print(data["temp"].mean())
 #
-# # Find the Maxium Temp
+# # Find the Maximum Temp
 # print(data["temp"].max())
 #
 # # Get Data in Columns*
@@ -63,4 +63,27 @@
 # dataframe_from_scratch.to_csv("new_data.csv")
 
 import pandas
-data = pandas.read_csv("")
+data = pandas.read_csv("squirrel_count.csv")                #importing & reading csv
+gray_squirrels = data[data["Primary Fur Color"] == "Gray"]  #get rows of gray squirrels
+gray_squirrels_count = len(data[data["Primary Fur Color"] == "Gray"])  #count of gray squirrels
+# print(gray_squirrels)
+print(gray_squirrels_count)
+
+red_squirrels_count = len(data[data["Primary Fur Color"] == "Cinnamon"])  #count of Cinnamon squirrels
+black_squirrels_count = len(data[data["Primary Fur Color"] == "Black"])  #count of Black squirrels
+print(red_squirrels_count)
+print(black_squirrels_count)
+
+# Construct Dataframe
+## 1st step is create the dictionary
+data_dict = {
+    "Fur Color": ["Gray", "Cinnamon", "Black"],
+    "Count": [gray_squirrels_count, red_squirrels_count, black_squirrels_count]
+}
+print(data_dict)
+
+## 2nd step is turn the dictionary in to a Data Frame
+df = pandas.DataFrame(data_dict)
+## Save the Data Frame into a new CSV file
+df.to_csv("squirrel_count_new")
+
