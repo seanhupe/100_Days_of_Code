@@ -1,5 +1,5 @@
 # with open("weather_data.csv") as data_file:
-#     # Take data and put it into a list
+#     # Take data and put it into a list using readlines
 #     data = data_file.readlines()
 #     print(data)
 #
