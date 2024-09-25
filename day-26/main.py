@@ -30,7 +30,7 @@ print(range_list)
 
 # ====================================================================================
 
-## CONDITIONAL LIST COMPREHENSION
+## CONDITIONAL LIST COMPREHEnNSION
 ## formula:   new_list = [new_item for item in list if test]
 
 names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
@@ -45,3 +45,26 @@ print(short_names)
 ##   answer will be CAROLINE, ELEANOR, FREDDIE
 long_names = [n.upper() for n in names if len(n) > 5]
 print(long_names)
+
+# ====================================================================================
+
+## CHALLENGES
+#
+# Squaring Numbers
+# You are going to write a List Comprehension to create a new list called squared_numbers.
+# This new list should contain every number in the list numbers but each number should be squared.
+
+#[new_item for item in list]
+numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+squared_numbers = [num * num for num in numbers]
+print(squared_numbers)
+
+
+## Convert list of strings to integers
+## Then create a new list of only even numbers
+
+list_of_strings = ['9', '0', '32', '8', '2', '8', '64', '29', '42', '99']
+# xxx = [new_item for item in list if test]
+numbers = [int(num) for num in list_of_strings]
+result = [num for num in numbers if num % 2 == 0]
+print(result)
