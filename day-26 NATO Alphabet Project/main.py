@@ -9,12 +9,18 @@ for (key, value) in student_dict.items():
     pass
 
 import pandas
+
 student_data_frame = pandas.DataFrame(student_dict)
+print(student_data_frame)
 
 #Loop through rows of a data frame
 for (index, row) in student_data_frame.iterrows():
     #Access index and row
     #Access row.student or row.score
+    # print(index)
+    # print(row)
+    print(row.student)
+    # print(row.score)
     pass
 
 # Keyword Method with iterrows()
