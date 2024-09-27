@@ -15,9 +15,10 @@ my_label.pack(side="left")
 # my_label.pack(side="right")
 # my_label.pack(expand=True)
 
+
 import turtle
-time = turtle.Turtle()
 
-
+tim = turtle.Turtle()
+tim.write("Some Text", font=("Times New Roman", 80, "bold"))
 
 window.mainloop()
