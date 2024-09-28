@@ -2,46 +2,39 @@ import tkinter
 from tkinter import *
 
 
-def button_clicked():
-    print("I got clicked")
-    new_text = input.get()
-    my_label.config(text=new_text)
+def miles_to_km():
+    miles = float(miles_input.get())
+    km = round(miles * 1.609)
+    km_results.config(text=f"{km}")
 
 
 ## Creating a window and setting the window Size
 window = Tk()
 window.title("Mile to Km Converter")
-window.minsize(width=500, height=250)
-window.config(padx=100, pady=0)
-
-## LABEL - need 4
-my_label1 = Label(font=("Arial", 12))
-my_label1.config(text="Miles")
-my_label1.grid(column=3, row=0)
-# my_label.config(padx=50, pady=50)
-# my_label.pack()
-
-my_label2 = Label(font=("Arial", 12))
-my_label2.config(text="Km")
-my_label2.grid(column=3, row=2)
-
-my_label3 = Label(font=("Arial", 12))
-my_label3.config(text="is equal to")
-my_label3.grid(column=1, row=2)
-
-my_label3 = Label(font=("Arial", 12))
-my_label3.config(text="0")
-my_label3.grid(column=2, row=2)
-
-## BUTTONS
-button = Button(text="Calculate", command=button_clicked)
-button.grid(column=2, row=3)
-
+window.config(padx=20, pady=20)
 
 ## ENTRY component
-input = Entry(width=10)
-print(input.get())
-# input.pack()
-input.grid(column=2, row=0)
+miles_input = Entry(width=7)
+miles_input.grid(column=1, row=0)
+
+## LABEL - need 4
+miles_label = Label(text="Miles")
+miles_label.grid(column=2, row=0)
+
+is_equal_label = Label(text="is equal to")
+is_equal_label.grid(column=0, row=1)
+
+km_label = Label(text="Km")
+km_label.grid(column=2, row=1)
+
+km_results = Label(text="0")
+km_results.grid(column=1, row=1)
+
+## BUTTONS
+calculate_button = Button(text="Calculate", command=miles_to_km)
+calculate_button.grid(column=1, row=3)
+
+
+
 
 window.mainloop()
