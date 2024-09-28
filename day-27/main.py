@@ -1,6 +1,5 @@
 import tkinter
 from tkinter import *
-
 ## Import * means to import EVERYthing
 
 # from playground import my_car
@@ -10,7 +9,7 @@ window = tkinter.Tk()
 window.title("My First GUI Program")
 window.minsize(width=700, height=500)
 
-## LABELs
+## LABEL
 my_label = tkinter.Label(text="I Am a Label", font=("Arial", 24, "bold"))
 my_label.pack()
 #This packs the label on the screen and has different options
@@ -26,7 +25,6 @@ my_label.config(text="New Text3")
 
 
 ## BUTTONS
-
 def button_clicked():
     print("I got clicked")
     new_text = input.get()
