@@ -13,7 +13,7 @@ window = Tk()
 window.title("Mile to Km Converter")
 window.config(padx=20, pady=20)
 
-## ENTRY component
+## ENTRY components
 miles_input = Entry(width=7)
 miles_input.grid(column=1, row=0)
 
