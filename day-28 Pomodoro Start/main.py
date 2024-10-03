@@ -15,7 +15,6 @@ reps = 0
 timer = None
 
 # ---------------------------- TIMER RESET ------------------------------- # 
-
 def reset_timer():
     window.after_cancel(timer)
     #timer_text 00:00
