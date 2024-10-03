@@ -21,7 +21,7 @@ def reset_timer():
     #timer_text 00:00
     canvas.itemconfig(timer_text, text="00:00")
     #title_label "Timer"
-    title_label.cofig(text="Timer")
+    title_label.config(text="Timer")
     #reset check_marks
     check_marks.config(text="")
     global reps
