@@ -1,37 +1,34 @@
 from tkinter import *
 from tkinter import messagebox
-
+from random import choice, randint, shuffle, random
+import pyperclip
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 #Password Generator Project
-import random
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+def generate_password():
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+               'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+               'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-nr_letters = random.randint(8, 10)
-nr_symbols = random.randint(2, 4)
-nr_numbers = random.randint(2, 4)
+    password_letters = [choice(letters) for _ in range(randint(8, 10))]
+    password_symbols = [choice(symbols) for _ in range(randint(2, 4))]
+    password_numbers = [choice(numbers) for _ in range(randint(2, 4))]
 
-password_list = []
+    password_list = password_letters + password_symbols + password_numbers
+    shuffle(password_list)
 
-for char in range(nr_letters):
-  password_list.append(random.choice(letters))
+    # password = ""
+    # for char in password_list:
+    #   password += char
+    password = "".join(password_list)
+    password_entry.insert(0, password)
+    pyperclip.copy(password)
 
-for char in range(nr_symbols):
-  password_list += random.choice(symbols)
+    # print(f"Your password is: {password}")
 
-for char in range(nr_numbers):
-  password_list += random.choice(numbers)
-
-random.shuffle(password_list)
-
-password = ""
-for char in password_list:
-  password += char
-
-print(f"Your password is: {password}")
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
@@ -43,15 +40,14 @@ def save():
     if len(website) == 0 or len(password) == 0:
         messagebox.showinfo(title="Oops", message="Fields cannot be empty!")
     else:
-        is_ok = messagebox.askokcancel(title=website, message=f"Theses are the details enters: \nEmail: {email} \nPassword: {password} \nIs it ok to save?")
+        is_ok = messagebox.askokcancel(title=website,
+                                       message=f"Theses are the details enters: \nEmail: {email} \nPassword: {password} \nIs it ok to save?")
 
         if is_ok:
             with open("data.txt", "a") as data_file:
                 data_file.write(f"{website} | {email} | {password}\n")
                 website_entry.delete(0, END)
                 password_entry.delete(0, END)
-
-
 
 
 # ---------------------------- UI SETUP ------------------------------- #+
@@ -90,7 +86,7 @@ password_entry = Entry(width=21)
 password_entry.grid(row=3, column=1, sticky=EW)
 
 ## BUTTONS
-generate_password_button = Button(text="Generate Password")
+generate_password_button = Button(text="Generate Password", command=generate_password)
 generate_password_button.grid(column=2, row=3, sticky=EW)
 #
 add_button = Button(text="Add", width=36, command=save)
