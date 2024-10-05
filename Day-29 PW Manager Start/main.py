@@ -5,14 +5,14 @@ from tkinter import *
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
-
     website = website_entry.get()
     email = email_entry.get()
     password = password_entry.get()
 
-
     with open("data.txt", "a") as data_file:
-        data_file.write(f"{website} | {email} | {password}")
+        data_file.write(f"{website} | {email} | {password}\n")
+        website_entry.delete(0, END)
+        password_entry.delete(0, END)
 
 
 
@@ -26,7 +26,6 @@ canvas = Canvas(width=200, height=200)
 logo_img = PhotoImage(file="logo.png")
 canvas.create_image(100, 100, image=logo_img)
 canvas.grid(column=1, row=0)
-
 
 ## LABEL - Website
 website_label = Label(text="Website:")
@@ -58,7 +57,5 @@ generate_password_button.grid(column=2, row=3, sticky=EW)
 #
 add_button = Button(text="Add", width=36, command=save)
 add_button.grid(column=1, row=4, columnspan=2, sticky=EW)
-
-
 
 window.mainloop()
