@@ -8,7 +8,7 @@ def button_clicked():
     my_label.config(text=new_text)
 
 
-## Creating a window and setting the window Size
+## Creating a window and setting the window Size and padding
 window = Tk()
 window.title("My First GUI Program")
 window.minsize(width=700, height=500)
