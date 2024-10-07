@@ -102,6 +102,8 @@ password_entry = Entry(width=21)
 password_entry.grid(row=3, column=1, sticky=EW)
 
 ## BUTTONS
+
+
 generate_password_button = Button(text="Generate Password", command=generate_password)
 generate_password_button.grid(column=2, row=3, sticky=EW)
 #
