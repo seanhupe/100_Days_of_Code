@@ -29,9 +29,14 @@ for hour_data in weather_data["list"]:
         will_rain = True
 
 if will_rain:
-    print("Bring Umbrella")
-else:
-    print("No Umbrella needed.")
+    client = Client(account_sid, auth_token)
+    message = client.messages \
+        .create(
+        body="It's going to rain today. Rembmer to bring an umbrella",
+        from_="3106637375",
+        to="3106637375"
+    )
+    print(message.status)
 
 
-# if code <= sunset or time_now <= sunrise:
+## Python Anywhere -- pythonanywhere.com to setup up constant script running
