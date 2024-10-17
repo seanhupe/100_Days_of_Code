@@ -49,7 +49,8 @@ if diff_percent > 0:
     }
 
     news_response = requests.get(NEWS_ENDPOINT, params=news_params)
-    print(news_response.json())
+    articles = news_response.json()["articles"]
+    print(articles)
 
     ## STEP 2: https://newsapi.org/ 
     # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
