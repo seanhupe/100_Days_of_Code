@@ -46,11 +46,11 @@ else:
     up_down = "👇"
 
 #TODO 4. - Work out the percentage difference in price between closing price yesterday and closing price the day before yesterday.
-diff_percent = float(difference) / float(yesterday_closing_price) * 100
+diff_percent = round(float(difference) / float(yesterday_closing_price) * 100)
 print(diff_percent)
 
 #TODO 5. - If TODO4 percentage is greater than 5 then print("Get News").
-if diff_percent > 0:
+if abs(diff_percent) > 0:
     news_params = {
         "apiKey": NEWS_API_KEY,
         "qInTitle": COMPANY_NAME,
@@ -75,7 +75,7 @@ if diff_percent > 0:
     #TODO 8. - Create a new list of the first 3 article's headline and description using list comprehension.
     #[new_item for item in list]
 
-    formatted_articles = [f"Headline: {article['title']} \nBrief: {article['description']}" for article in three_articles]
+    formatted_articles = [f"{STOCK_NAME}: {up_down}{diff_percent}Headline: {article['title']} \nBrief: {article['description']}" for article in three_articles]
     print(formatted_articles)
 
     #TODO 9. - Send each article as a separate message via Twilio.
