@@ -60,7 +60,7 @@ if abs(diff_percent) > 0:
     articles = news_response.json()["articles"]
     print(articles)
 
-    ## STEP 2: https://newsapi.org/ 
+    ## STEP 2: https://newsapi.org/    ,
     # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
 
 #TODO 6. - Instead of printing ("Get News"), use the News API to get articles related to the COMPANY_NAME.
