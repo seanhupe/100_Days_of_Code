@@ -6,7 +6,7 @@ import smtplib
 MY_EMAIL = "seanhupe2024@gmail.com"
 MY_PASSWORD = "heqr qcyo lqua zjqp"
 
-# 2. Check if today matches a birthday in the birthdays.csv
+# 2. Check if today matches a birthday in the birthdays.csv  ..
 today = datetime.now()
 today_tuple = (today.month, today.day)
 
