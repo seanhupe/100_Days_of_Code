@@ -63,10 +63,5 @@ print(response.text)
 ## DELETE
 delete_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
 
-delete_pixel_data = {
-    "date": today.strftime("%Y%m%d"),
-    "quantity": "4.5",
-}
-
-response = requests.put(url=update_endpoint, json=new_pixel_data, headers=headers)
+response = requests.delete(url=delete_endpoint, headers=headers)
 print(response.text)
