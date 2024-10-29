@@ -63,7 +63,7 @@ print(response.text)
 ## DELETE
 delete_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
 
-new_pixel_data = {
+delete_pixel_data = {
     "date": today.strftime("%Y%m%d"),
     "quantity": "4.5",
 }
