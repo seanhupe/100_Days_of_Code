@@ -37,12 +37,25 @@ headers = {
 
 pixel_creation_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}"
 
-today = datetime.now()
+today = datetime(year=2024, month=10, day=28)
 
 pixel_data = {
     "date": today.strftime("%Y%m%d"),
-    "quantity": "9.74",
+    "quantity": "18",
 }
 
-response = requests.post(url=pixel_creation_endpoint, json=pixel_data, headers=headers)
+# response = requests.post(url=pixel_creation_endpoint, json=pixel_data, headers=headers)
+# print(response.text)
+
+# -------------------------------------------------------------------------
+## UPDATE
+update_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
+
+new_pixel_data = {
+    "date": today.strftime("%Y%m%d"),
+    "quantity": "4.5",
+}
+
+response = requests.put(url=update_endpoint, json=new_pixel_data, headers=headers)
 print(response.text)
+
