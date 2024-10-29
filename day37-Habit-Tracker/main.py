@@ -24,5 +24,10 @@ graph_config = {
     "type": "float",
     "color": "ajisai",
 }
-response = requests.post(url=graph_endpoint, json=graph_config)
+
+headers = {
+    "X-USER-TOKEN": TOKEN
+}
+
+response = requests.post(url=graph_endpoint, json=graph_config, headers=headers)
 print(response.text)
