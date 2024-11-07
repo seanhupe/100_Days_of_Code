@@ -56,7 +56,7 @@ new_pixel_data = {
     "quantity": "4.5",
 }
 
-#  response = requests.put(url=update_endpoint, json=new_pixel_data, headers=headers)
+# response = requests.put(url=update_endpoint, json=new_pixel_data, headers=headers)
 #print(response.text)
 
 # -------------------------------------------------------------------------
