@@ -57,7 +57,7 @@ new_pixel_data = {
 }
 
 # response = requests.put(url=update_endpoint, json=new_pixel_data, headers=headers)
-#print(response.text)........................
+#print(response.text).......................
 # -------------------------------------------------------------------------
 ## DELETE
 delete_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
