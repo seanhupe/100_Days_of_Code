@@ -47,7 +47,7 @@ pixel_data = {
 # response = requests.post(url=pixel_creation_endpoint, json=pixel_data, headers=headers)
 # print(response.text)
 
-# ------------------------------------------------------------------
+# -----------------------------------------------------------------
 ## UPDATE
 update_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
 
