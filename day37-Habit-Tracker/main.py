@@ -16,7 +16,7 @@ uers_params = {
 
 # response = requests.post(url=pixela_endpoint, json=uers_params)
 # print(response.text)
-# --------------------------------------------------------------------------
+# ------------------------------------------------------------------------
 graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
 
 graph_config = {
